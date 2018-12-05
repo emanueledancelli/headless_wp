@@ -1,8 +1,10 @@
 
 <?php
 
+//php-game is weak
+
 function custom_logo() {
-	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login/custom-login-styles.css" />';
+	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login.css" />';
 	}
 add_action('login_head', 'custom_logo');
 
