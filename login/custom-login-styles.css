@@ -1,0 +1,16 @@
+body.login {
+    background-color: #ffffff;
+}
+
+.login h1 a {
+     background-image: url('login-logo.png');
+}
+
+p#backtoblog {
+    display: none;
+  }
+
+
+p#nav {
+    display: none;
+  }
