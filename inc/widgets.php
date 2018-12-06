@@ -1,5 +1,9 @@
 <?php 
-  
+
+/* 
+Adds 2 custom widgets area in the dashboard
+*/
+
 function custom_dashboard_widgets() {
 	global $wp_meta_boxes;
 	wp_add_dashboard_widget('custom_help_widget', 'Eventi Alture', 'custom_dashboard_help');

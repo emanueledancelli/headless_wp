@@ -1,5 +1,9 @@
 <?php
 
+/* 
+Hides menu based on user_email
+*/
+
 function remove_menus(){
     $current_user = wp_get_current_user();
     if( 'emanueledancelli@gmail.com' !==  $current_user->user_email){
@@ -18,6 +22,10 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+/* 
+Removes admin top bar unneeded content
+*/
+
 function remove_admin_bar_content() {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('comments');
@@ -28,11 +36,19 @@ function remove_admin_bar_content() {
 }
 add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_content' );
 
+/* 
+Removes help tabs 
+*/
+
 function remove_help_tabs($old_help, $screen_id, $screen){
     $screen->remove_help_tabs();
     return $old_help;
 }
 add_filter( 'contextual_help', 'remove_help_tabs', 999, 3 );
+
+/* 
+Removes permalinks, built with, wp version and screen options 
+*/
 
 function hide_permalink() {
     return '';
