@@ -6,20 +6,21 @@ Adds 2 custom widgets area in the dashboard
 
 function custom_dashboard_widgets() {
 	global $wp_meta_boxes;
-	wp_add_dashboard_widget('custom_help_widget', 'Eventi Alture', 'custom_dashboard_help');
-	wp_add_dashboard_widget('another_help_widget', 'Invia una notifica', 'onesignal_dashboard_help');
+	// ('widget name', 'widgets name in dashboard', 'widget reference')
+	wp_add_dashboard_widget('custom_help_widget_one', 'Widget One', 'custom_dashboard_widget_one');
+	wp_add_dashboard_widget('custom_help_widget_two', 'Widget Two', 'custom_dashboard_widget_two');
 }
 
-function onesignal_dashboard_help() {
+function custom_dashboard_widget_one() {
 	echo '
-		<p><a href="https://onesignal.com" target="_blank" rel="noopener noreferrer">Vai alle notifiche</a></p>
-		<p><strong>id:</strong> altureonesignal@gmail.com  <strong>pwd:</strong> lenotifichedialture!</p>';
+		<p><a href=""></a></p>
+		<p><a href=""></a></p>';
 }
 
-function custom_dashboard_help() {
+function custom_dashboard_widget_two() {
 	echo '
-		<p><a href="https://api.alture.org/wp-admin/edit.php?post_type=evento">Visualizza tutti gli eventi</a></p> 
-		<p><a href="https://api.alture.org/wp-admin/post-new.php?post_type=evento">Aggiungi un evento</a></p>';
+		<p><a href=""></a></p> 
+		<p><a href=""></a></p>';
 }
 
 add_action('wp_dashboard_setup', 'custom_dashboard_widgets');

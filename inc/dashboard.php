@@ -6,7 +6,8 @@ Hides menu based on user_email
 
 function remove_menus(){
     $current_user = wp_get_current_user();
-    if( 'emanueledancelli@gmail.com' !==  $current_user->user_email){
+    //insert chosen email below between ''
+    if( '' !==  $current_user->user_email){
        remove_menu_page('edit.php'); 
        remove_menu_page('upload.php'); 
        remove_menu_page('link-manager.php'); 

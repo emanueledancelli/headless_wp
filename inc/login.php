@@ -17,7 +17,8 @@ Overrides error message
 */
 
 function error_override() {
-	return 'Dati non corretti';
+	//set your custom message below between ''
+	return '';
 }
 add_filter('login_errors', 'error_override');
 
@@ -29,8 +30,9 @@ function login_logo_url() {
 	return get_bloginfo( 'url' );
 }
 add_filter( 'login_headerurl', 'login_logo_url' );
-	
+
 function login_logo_url_title() {
-	return 'Alture.org';
+	//insert custom title below between ''
+	return '';
 }
 add_filter( 'login_headertitle', 'login_logo_url_title' );
