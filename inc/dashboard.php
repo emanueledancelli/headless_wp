@@ -1,7 +1,9 @@
 <?php
 
 /* 
-Hides menu based on user_email
+*
+* Hides menu based on user_email
+*
 */
 
 function remove_menus(){

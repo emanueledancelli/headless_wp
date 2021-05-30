@@ -59,9 +59,6 @@
   }
   ```
 
-  This is more a security through obscurity security measure.
-  It avoids letting users know if they need to retype password or user during a login.
-
 - Add your custom logo/screenshot.
 
   `screenshot.png` is the theme screenshot.
